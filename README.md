@@ -1,41 +1,90 @@
 # AIPS – AI Interview Prep Suite
 
-Welcome to the AI Interview Prep Suite! This is a production-ready web app powered by Next.js and FastAPI with Google Gemini integration.
+A production-ready AI interview preparation platform that helps job seekers practice mock interviews, improve communication, and build professional resumes.
+
+## Live Demo
+
+Local demo: http://localhost:3000
+
+## Overview
+
+This project combines a modern frontend and a scalable backend to deliver an interactive interview preparation experience. It includes resume analysis, mock interview flow, study modules, and AI-powered Q&A generation.
+
+## Problem
+
+Candidates often struggle to prepare for technical interviews because they need structured guidance, realistic practice, and consistent feedback across multiple areas.
+
+## Solution
+
+The app provides a guided interview experience with AI-driven questions, a dashboard for tracking performance, and a study roadmap to help users improve step by step.
+
+## Features
+
+- AI mock interview chat
+- Resume builder and dashboard
+- Interview Q&A generator
+- Study roadmap module
+- Responsive cyber-themed UI
+
+## Tech Stack
+
+- Next.js
+- FastAPI
+- SQLite
+- Gemini AI
+- Tailwind CSS
+- Recharts
+
+## Architecture
+
+Frontend UI -> API layer -> AI service -> SQLite data store
 
 ## Project Structure
 
-- `frontend/`: Next.js App Router application with Tailwind CSS, Framer Motion, Recharts, and Zustand.
-- `backend/`: FastAPI application with SQLite database, JWT auth setup, and Gemini `google-genai` integration setup.
+```text
+AI_/
+├── frontend/
+├── backend/
+├── README.md
+└── package.json / requirements.txt
+```
 
-## Running the Application
+## Getting Started
 
-### 1. Backend (FastAPI + Gemini)
-You need to set your Gemini API key to make the AI endpoints work.
+```bash
+# Frontend
+cd frontend
+npm install
+npm run dev
 
-1. Open `backend/services/ai_service.py` 
-2. Add your API key inside or create a `.env` file in `backend/.env` with `GEMINI_API_KEY=your_key_here`.
-3. Open a terminal in `backend/` and run:
-   ```bash
-   pip install -r requirements.txt
-   uvicorn main:app --reload --port 8000
-   ```
-   The backend will be running at [http://localhost:8000](http://localhost:8000)
-   View interactive docs at [http://localhost:8000/docs](http://localhost:8000/docs)
+# Backend
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload --port 8000
+```
 
-### 2. Frontend (Next.js + Cyber Sunset Theme)
-The frontend contains beautiful glassmorphism designs and Framer Motion animations.
+## Screenshots
 
-1. Open a terminal in `frontend/` and run:
-   ```bash
-   npm install
-   npm run dev
-   ```
-   The frontend will be running at [http://localhost:3000](http://localhost:3000)
+Add screenshots of the dashboard, mock interview flow, and resume builder here.
 
-## Features Included
-1. **Viral Login Page**: Split screen animated cyber sunset background.
-2. **Dashboard**: Recharts graph of performance with gradient UI.
-3. **Resume Builder**: Simulated API form submission.
-4. **Mock Interview**: Chat interface.
-5. **Interview Q&A Generator**: Accordion-based answers ui.
-6. **Study Module**: Roadmap style timeline view.
+## Challenges
+
+- Integrating the AI API reliably
+- Designing a modern and intuitive UI
+- Creating a smooth interview experience
+
+## What I Learned
+
+- Full-stack app structure
+- Prompt engineering with AI APIs
+- Frontend/backend integration and deployment preparation
+
+## Future Improvements
+
+- Real-time collaboration
+- Interview analytics dashboard
+- Better resume insights and scoring
+
+## Author
+
+Rajendra M Madival
